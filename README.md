@@ -1,3 +1,14 @@
+<h1>🔍 Overview</h1>
+<p>This repository generates smooth attention heatmaps from object detection results.
+    It supports:
+    <ul>
+        <li>Input images and COCO-format bounding boxes</li>
+        <li>Gaussian-based heatmap generation per object</li>
+        <li>Central region focus via area_ratio</li>
+        <li>Simple inference pipeline via JSON config</li>
+    </ul>
+</p>
+
 <h1>Generate Heatmap</h1>
 <p>In some applications, such as visual analytics for marketing, it is valuable to visualize object presence or attention focus via a heatmap. This algorithm creates a smooth heatmap over each detected object based on its bounding box.</p>
 
@@ -27,14 +38,14 @@
                 </ol>
                 <p><b>The result after first step:</b></p>
                 <div style="text-align: center;">
-                <img src="data/extract_central_region.gif" alt="Extract Central Region" style="max-width: 100%; height: auto;">
+                <img src="resources/extract_central_region.gif" alt="Extract Central Region" style="max-width: 100%; height: auto;">
                 </div>
              </li>
              <li><h4>Select a random point inside the central region</h4>
              <p>Randomly Select a Pixel Coordinate Inside the Central Region</p>
             <p><b>The result after second step:</b></p>
              <div style="text-align: center;">
-             <img src="data/select_random_point.gif" alt="Select Random Point" style="max-width: 100%; height: auto;">
+             <img src="resources/select_random_point.gif" alt="Select Random Point" style="max-width: 100%; height: auto;">
              </div>
              </li>
              <li><h4 id="generate_gaussian_heatmap">Generate Gaussian Heatmap</h4>
@@ -46,7 +57,7 @@
                 <li>
                     For every pixel coordinate <code>(x, y)</code> on the <b>bbox</b> grid, calculate the heatmap value using the Gaussian formula:<br><br>
                     <div style="text-align: center;">
-                    <img src="data/gaussian_distribution.png" alt="Gaussian Distribution" style="max-width: 100%; height: auto;">
+                    <img src="resources/gaussian_distribution.png" alt="Gaussian Distribution" style="max-width: 100%; height: auto;">
                     </div>
                 </li>
             </ol>
@@ -55,17 +66,17 @@
             <li><h4>Normalize heatmap values</h4>
             <p>To scale the heatmap values to a consistent range for visualization and comparison, we apply min-max normalization. This rescales all heatmap values to the range <code>[0,1]</code> by subtracting the minimum value and dividing by the range:</p>
             <p align="center">
-            <img src="data/normalization.png" alt="Normalization" style="max-width: 100%; height: auto;">
+            <img src="resources/normalization.png" alt="Normalization" style="max-width: 100%; height: auto;">
             </p>
             <p><b>The result after third step:</b></p>
             <div style="text-align: center;">
-            <img src="data/generate_gaussian_heatmap.gif" alt="Generate Gaussian Heatmap" style="max-width: 100%; height: auto;">
+            <img src="resources/generate_gaussian_heatmap.gif" alt="Generate Gaussian Heatmap" style="max-width: 100%; height: auto;">
             </div>
             </li>
     </ol>
             <li><h3>Visualization</h3><p>The final result will be as follows:<p>
             <div style="text-align: center;">
-            <img src="data/final_result.png" alt="Generate Gaussian Heatmap" style="max-width: 100%; height: auto;">
+            <img src="resources/final_result.png" alt="Generate Gaussian Heatmap" style="max-width: 100%; height: auto;">
             </div>
             </li>
 </ol>

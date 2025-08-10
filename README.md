@@ -9,6 +9,8 @@
     </ul>
 </p>
 
+<p>Additionally, we provide ready-to-use code to run this solution directly in <a href="rgb2heatmap.ipynb">Google Colab</a> for easy experimentation and use in the cloud.</p>
+
 <h1>Generate Heatmap</h1>
 <p>In some applications, such as visual analytics for marketing, it is valuable to visualize object presence or attention focus via a heatmap. This algorithm creates a smooth heatmap over each detected object based on its bounding box.</p>
 
